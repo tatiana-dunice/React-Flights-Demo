@@ -1,0 +1,32 @@
+.airportsGridContainer {
+  width: 70%;
+  height: 80%;
+  padding: 30px;
+  box-sizing: border-box;
+
+}
+
+.airportsGridTitle {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.airportsGrid {
+  overflow-y: auto;
+  height: 90%;
+}
+
+.gridLegend {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.gridLegend > *:nth-child(1) {
+  width: 15%;
+  text-align: center;
+}

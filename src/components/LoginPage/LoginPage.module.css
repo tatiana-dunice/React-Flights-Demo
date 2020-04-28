@@ -1,0 +1,42 @@
+.loginBlockContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBlock {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.loginBlock > * {
+  margin-bottom: 20px;
+}
+
+.loginBlockTitle {
+  font-size: 18px;
+}
+
+.loginBlockInput {
+  width: 100%;
+}
+
+.loginButtonContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginButton {
+  width: 100%;
+}

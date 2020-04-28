@@ -1,0 +1,34 @@
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: darkslateblue;
+  box-sizing: border-box;
+  align-items: center;
+  color: #FFF;
+}
+
+.logoutButton {
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.splitter {
+  height: 24px;
+  width: 2px;
+  background-color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.authBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 36px;
+}
