@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo, memo } from 'react';
+import React, { useCallback, useState, useEffect, useMemo, memo } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Input, CircularProgress, Paper } from '@material-ui/core';
@@ -22,13 +22,26 @@ const LoginPage = () => {
   ]);
 
   const userLoginHandler = useCallback(() => {
-    dispatch(userLoginAction({ username, password }));
+    if (password && username) {
+      dispatch(userLoginAction({ username, password }));
+    }
   }, [dispatch, password, username]);
 
   const loginButtonIsDisabled = useMemo(() => !(username && password), [
     username,
     password,
   ]);
+
+  useEffect(() => {
+    const keypressListener = (event) => {
+      if (event.key === 'Enter') {
+        userLoginHandler();
+      }
+    }
+
+    document.addEventListener('keypress', keypressListener);
+    return () => document.removeEventListener('keypress', keypressListener);
+  }, [userLoginHandler]);
 
   return (
     <>
@@ -46,6 +59,7 @@ const LoginPage = () => {
               onChange={(e) => setUsername(e.target.value)}
             />
             <Input
+              type="password"
               className={styles.loginBlockInput}
               color="primary"
               defaultValue={password}
