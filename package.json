@@ -46,7 +46,10 @@
     ]
   },
   "devDependencies": {
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "husky": "^4.2.5",
+    "path": "^0.12.7",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2"
   }
